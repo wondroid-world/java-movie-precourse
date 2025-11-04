@@ -51,7 +51,7 @@ public class MovieTest {
     void endingTime() {
         // given
         LocalDateTime now = LocalDateTime.now();
-        LocalDateTime expected = now.plusMinutes(movie.getRunningTime());
+        LocalDateTime expected = now.plusMinutes(movie.runningTime());
 
         // when
         LocalDateTime result = movie.endingTime(now);
