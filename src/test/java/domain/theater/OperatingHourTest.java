@@ -1,15 +1,12 @@
-package domain;
+package domain.theater;
 
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-
 import java.time.LocalTime;
-
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class TheaterTest {
-    private Theater theater;
+public class OperatingHourTest {
+    private OperatingHour operatingHour;
     private LocalTime openingTime;
     private LocalTime closingTime;
 
@@ -17,56 +14,52 @@ public class TheaterTest {
     void setup() {
         openingTime = LocalTime.of(9, 0);
         closingTime = LocalTime.of(22, 0);
-        theater = new Theater(openingTime, closingTime);
+        operatingHour = new OperatingHour(openingTime, closingTime);
     }
 
     @Test
-    @DisplayName("상영관의 시간이 opeingTime보다 전이면, false를 반환한다.")
-    void isNotOperatedBeforeOpeningTime() {
+    void 상영_시간이_opeingTime보다_전이면_false를_반환한다() {
         // given
         LocalTime timeBeforeOpeningTime = openingTime.minusHours(1);
 
         // when
-        boolean result = theater.inOperation(timeBeforeOpeningTime);
+        boolean result = operatingHour.inOperation(timeBeforeOpeningTime);
 
         // then
         assertThat(result).isFalse();
     }
 
     @Test
-    @DisplayName("상영관의 시간이 opeingTime보다 후이면, true를 반환한다.")
-    void isOperatedAfterOpeningTime() {
+    void 상영_시간이_opeingTime보다_후이면_true를_반환한다() {
         // given
         LocalTime timeAfterOpeningTime = openingTime.plusHours(1);
 
         // when
-        boolean result = theater.inOperation(timeAfterOpeningTime);
+        boolean result = operatingHour.inOperation(timeAfterOpeningTime);
 
         // then
         assertThat(result).isTrue();
     }
 
     @Test
-    @DisplayName("상영관의 시간이 closingTime보다 전이면, true를 반환한다.")
-    void isNotOperatedBeforeClosingTime() {
+    void 상영_시간이_closingTime보다_전이면_true를_반환한다() {
         // given
         LocalTime timeBeforeClosingTime = closingTime.minusHours(1);
 
         // when
-        boolean result = theater.inOperation(timeBeforeClosingTime);
+        boolean result = operatingHour.inOperation(timeBeforeClosingTime);
 
         // then
         assertThat(result).isTrue();
     }
 
     @Test
-    @DisplayName("상영관의 시간이 closingTime보다 전이면, true를 반환한다.")
-    void isNotOperatedAfterClosingTime() {
+    void 상영_시간이_closingTime보다_후이면_false를_반환한다() {
         // given
         LocalTime timeAfterClosingTime = closingTime.plusHours(1);
 
         // when
-        boolean result = theater.inOperation(timeAfterClosingTime);
+        boolean result = operatingHour.inOperation(timeAfterClosingTime);
 
         // then
         assertThat(result).isFalse();
