@@ -1,4 +1,4 @@
-package domain;
+package domain.movie;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
@@ -14,6 +14,7 @@ public class MovieTest {
     @BeforeEach
     void setup() {
         movie = new Movie(
+                1L,
                 "극장판 체인소 맨: 레제편",
                 120L,
                 LocalDate.now(),
