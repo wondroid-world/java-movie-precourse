@@ -56,4 +56,16 @@ public class SeatTest {
         // then
         assertThat(result).isEqualTo(expected);
     }
+
+    @Test
+    void 좌석_번호를_반환한다() {
+        // given
+        String expected = "A1";
+
+        // when
+        String result = seat.getSeatNumber();
+
+        // then
+        assertThat(result).isEqualTo(expected);
+    }
 }

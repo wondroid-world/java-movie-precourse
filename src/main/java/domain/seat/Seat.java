@@ -19,6 +19,10 @@ public class Seat {
         this(new SeatNumber(new Row(row), new Column(column)), seatType, false);
     }
 
+    public String getSeatNumber() {
+        return seatNumber.getSeatNumber();
+    }
+
     public Boolean getBook() {
         return isBook;
     }
