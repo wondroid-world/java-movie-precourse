@@ -36,11 +36,11 @@ public class ReservedSeatTest {
     @Test
     void 좌석을_예약을_취소하면_false를_반환한다() {
         // given
-        reservedSeat.book();
-        reservedSeat.cancel();
+        ReservedSeat booked = reservedSeat.book();
+        ReservedSeat canceledSeat = booked.cancel();
 
         // when
-        Boolean result = reservedSeat.getIsBook();
+        Boolean result = canceledSeat.getIsBook();
 
         // then
         assertThat(result).isFalse();

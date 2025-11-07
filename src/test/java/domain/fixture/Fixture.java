@@ -5,7 +5,7 @@ import domain.Point;
 import domain.movie.Movie;
 import domain.reservation.Invoice;
 import domain.reservation.ReservedSeat;
-import domain.schedule.Screening;
+import domain.screening.Screening;
 import domain.seat.Seat;
 import domain.seat.SeatType;
 import domain.theater.Theater;
@@ -110,7 +110,11 @@ public class Fixture {
             PaymentMethod.CARD
     );
 
-    public static final Screening FIRST_SCREENING =  new Screening(1L, MOVIE, THEATER, LocalDateTime.of(2025, 11, 1, 10, 0, 0));
-    public static final Screening SECOND_SCREENING =  new Screening(1L, MOVIE, THEATER, LocalDateTime.of(2025, 11, 1, 12, 0, 0));
-    public static final Screening OVERLAPPED_SCREENING =  new Screening(1L, MOVIE, THEATER, LocalDateTime.of(2025, 11, 1, 11, 0, 0));
+    public static final Screening FIRST_SCREENING = new Screening(1L, MOVIE, THEATER, LocalDateTime.of(2025, 11, 1, 10, 0, 0));
+    public static final Screening SECOND_SCREENING = new Screening(1L, MOVIE, THEATER, LocalDateTime.of(2025, 11, 1, 12, 0, 0));
+    public static final Screening OVERLAPPED_SCREENING = new Screening(1L, MOVIE, THEATER, LocalDateTime.of(2025, 11, 1, 11, 0, 0));
+
+    public static final ReservedSeat FIRST_RESERVEDSEAT = new ReservedSeat(FIRST_SCREENING, SEAT);
+    public static final ReservedSeat SECOND_RESERVEDSEAT = new ReservedSeat(SECOND_SCREENING, SEAT);
+    public static final ReservedSeat OVERLAPPED_RESERVEDSEAT = new ReservedSeat(OVERLAPPED_SCREENING, SEAT);
 }
