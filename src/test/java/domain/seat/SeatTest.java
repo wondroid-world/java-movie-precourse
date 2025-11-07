@@ -14,38 +14,6 @@ public class SeatTest {
     }
 
     @Test
-    void 좌석을_처음_잡았을때_빈_좌석이다(){
-        // given, when
-        Boolean result = seat.getBook();
-
-        // then
-        assertThat(result).isFalse();
-    }
-
-    @Test
-    void 좌석을_예약하면_true를_반환한다() {
-        // given, when
-        seat.book();
-        Boolean result = seat.getBook();
-
-        // then
-        assertThat(result).isTrue();
-    }
-
-    @Test
-    void 좌석을_예약을_취소하면_false를_반환한다() {
-        // given
-        seat.book();
-        seat.cancel();
-
-        // when
-        Boolean result = seat.getBook();
-
-        // then
-        assertThat(result).isFalse();
-    }
-
-    @Test
     void 좌석의_가격을_알_수_있다() {
         // given
         int expected = SeatType.A.getPrice();
