@@ -1,4 +1,4 @@
-package domain.schedule;
+package domain.screening;
 
 import domain.movie.Movie;
 import domain.theater.Theater;

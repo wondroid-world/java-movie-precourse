@@ -1,4 +1,4 @@
-package domain.schedule;
+package domain.screening;
 
 import domain.movie.Movie;
 import domain.theater.Theater;
@@ -6,13 +6,13 @@ import domain.theater.Theater;
 import java.time.LocalDateTime;
 
 public class Screening {
+    private static final String ERROR_NOT_PLAYING = "영화 상영 기간이 아닙니다.";
+    private static final String ERROR_THEATER_CLOSED = "상영관 운영시간이 아닙니다.";
+
     private final long id;
     private final Movie movie;
     private final Theater theater;
     private final LocalDateTime startTime;
-
-    private static final String ERROR_NOT_PLAYING = "영화 상영 가능 기간이 아닙니다.";
-    private static final String ERROR_THEATER_CLOSED = "상영관 운영시간이 아닙니다.";
 
     public Screening(long id, Movie movie, Theater theater, LocalDateTime startTime) {
         if (!movie.isPlaying(startTime.toLocalDate())) {
@@ -32,10 +32,6 @@ public class Screening {
         return startTime;
     }
 
-    public LocalDateTime getEndTime() {
-        return movie.endingTime(startTime);
-    }
-
     public Movie getMovie() {
         return movie;
     }
@@ -46,5 +42,9 @@ public class Screening {
 
     public long getId() {
         return id;
+    }
+
+    public LocalDateTime getEndTime() {
+        return movie.endingTime(startTime);
     }
 }
