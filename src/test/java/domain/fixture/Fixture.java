@@ -109,4 +109,8 @@ public class Fixture {
             new Point(0),
             PaymentMethod.CARD
     );
+
+    public static final Screening FIRST_SCREENING =  new Screening(1L, MOVIE, THEATER, LocalDateTime.of(2025, 11, 1, 10, 0, 0));
+    public static final Screening SECOND_SCREENING =  new Screening(1L, MOVIE, THEATER, LocalDateTime.of(2025, 11, 1, 12, 0, 0));
+    public static final Screening OVERLAPPED_SCREENING =  new Screening(1L, MOVIE, THEATER, LocalDateTime.of(2025, 11, 1, 11, 0, 0));
 }
