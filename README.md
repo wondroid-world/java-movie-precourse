@@ -33,62 +33,62 @@
     - 행동 
       - 상영 중인지 알 수 있음
       - 끝나는 시간을 알 수 있음
-- Theater
-    - 상태 : id, 운영 시작 시간, 운영 종료 시간
+  - Theater
+      - 상태 : id, 운영 시작 시간, 운영 종료 시간
+      - 행동 
+        - 운영 중인지 여부를 알 수 있음
+  - Theaters
+    - 상태 : List<Theater>
+    - 행동
+      - 새로운 상영관을 추가
+      - 기존 상영관을 제거
+      - 전체 상영관을 반환
+  - Seat
+    - 상태
+      - SeatNumber
+          - Row(알파벳)
+            - 행은 CGV 용산 아이파크몰 IMAX관 기준으로 A ~ P까지 있다.
+            - CGV 용산 아이파크몰 선정 이유 : 국내에서 제일 큰 영화관임으로 선정하였음.
+            - Column(숫자)
+            - 행은 CGV 용산 아이파크몰 IMAX관 기준으로 1 ~ 45까지 있다.
+      - SeatType
+        - S석은 18,000원
+        - A석은 15,000원
+        - B석은 12,000원
+    - 행동
+      - 좌석 번호를 반환
+      - 좌석 가격을 반환
+  - Screening
+    - 상태 : id, Movie, Theater, 시작 시간
+    - 행동
+      - 상영이 끝나는 시간 반환
+      - 상영 시간이 가능한지 확인
+  - Screenings
+    - 상태 : List<Screening>
+    - 행동
+      - screening 전체를 반환
+      - screening을 추가할 수 있음
+  - ReservedSeat
+    - 상태 : screening, seat, 예약되었는 지
     - 행동 
-      - 운영 중인지 여부를 알 수 있음
-- Theaters
-  - 상태 : List<Theater>
-  - 행동
-    - 새로운 상영관을 추가
-    - 기존 상영관을 제거
-    - 전체 상영관을 반환
-- Seat
-  - 상태
-    - SeatNumber
-        - Row(알파벳)
-          - 행은 CGV 용산 아이파크몰 IMAX관 기준으로 A ~ P까지 있다.
-          - CGV 용산 아이파크몰 선정 이유 : 국내에서 제일 큰 영화관임으로 선정하였음.
-          - Column(숫자)
-          - 행은 CGV 용산 아이파크몰 IMAX관 기준으로 1 ~ 45까지 있다.
-    - SeatType
-      - S석은 18,000원
-      - A석은 15,000원
-      - B석은 12,000원
-  - 행동
-    - 좌석 번호를 반환
-    - 좌석 가격을 반환
-- Screening
-  - 상태 : id, Movie, Theater, 시작 시간
-  - 행동
-    - 상영이 끝나는 시간 반환
-    - 상영 시간이 가능한지 확인
-- Screenings
-  - 상태 : List<Screening>
-  - 행동
-    - screening 전체를 반환
-    - screening을 추가할 수 있음
-- ReservedSeat
-  - 상태 : screening, seat, 예약되었는 지
-  - 행동 
-    - 자리를 예약할 수 있음
-    - 자리를 취소할 수 있음
-    - 이미 예약된 좌석은 다시 선택할 수 없음
-- Reservation
-  - 상태 : ReservaedSeats
-  - 행동 
-    - 겹치는 상영을 예매할 수 없음
-- Invoice
-  - 상태 : 예약된 좌석, 지불할 금액, 사용할 포인트, 지불 방법
-  - 행동 
-    - 할인 비율 적용
-    - 할인 금액 적용
-    - 할인 포인트 적용
-- Discount
-  - MovieDayDiscount : 매월 10일, 20일, 30일에 상영되는 영화는 10% 할인
-  - TimeDiscount : 오전 11시 이전 또는 오후 8시 이후에 시작하는 상영은 2,000원이 할인
-  - PointDiscount : 보유한 포인트로 예매 결제 가능
-  - PaymentDiscount : 신용카드 결제 5% 할인, 현금 결제 2% 할인
+      - 자리를 예약할 수 있음
+      - 자리를 취소할 수 있음
+      - 이미 예약된 좌석은 다시 선택할 수 없음
+  - Reservation
+    - 상태 : ReservaedSeats
+    - 행동 
+      - 겹치는 상영을 예매할 수 없음
+  - Invoice
+    - 상태 : 예약된 좌석, 지불할 금액, 사용할 포인트, 지불 방법
+    - 행동 
+      - 할인 비율 적용
+      - 할인 금액 적용
+      - 할인 포인트 적용
+  - Discount
+    - MovieDayDiscount : 매월 10일, 20일, 30일에 상영되는 영화는 10% 할인
+    - TimeDiscount : 오전 11시 이전 또는 오후 8시 이후에 시작하는 상영은 2,000원이 할인
+    - PointDiscount : 보유한 포인트로 예매 결제 가능
+    - PaymentDiscount : 신용카드 결제 5% 할인, 현금 결제 2% 할인
   
-- 조건 할인 정책 적용 순서 -> controller에서 추후 적용 필요
-  - 무비데이 -> 시간 조건 할인 -> 포인트 할인 -> 결제할인 정책
+  - 조건 할인 정책 적용 순서 -> controller에서 추후 적용 필요
+    - 무비데이 -> 시간 조건 할인 -> 포인트 할인 -> 결제할인 정책
