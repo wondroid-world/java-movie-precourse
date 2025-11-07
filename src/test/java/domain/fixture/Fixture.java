@@ -67,4 +67,46 @@ public class Fixture {
             new Point(0),
             PaymentMethod.CARD
     );
+
+    public static final Screening EARLY_BIRD_TIME_DISCOUNT_SCREENING = new Screening(1L, MOVIE, THEATER, LocalDateTime.of(2025, 11, 1, 10, 0, 0));
+
+    public static final ReservedSeat EARLY_BIRD_TIME_DISCOUNT_RESERVED_SEAT = new ReservedSeat(
+            EARLY_BIRD_TIME_DISCOUNT_SCREENING,
+            SEAT,
+            false
+    );
+
+    public static final Invoice EARLY_BIRD_TIME_DISCOUNT_INVOICE = new Invoice(
+            EARLY_BIRD_TIME_DISCOUNT_RESERVED_SEAT,
+            new Point(0),
+            PaymentMethod.CARD
+    );
+
+    public static final Screening LATE_BIRD_TIME_DISCOUNT_SCREENING = new Screening(1L, MOVIE, THEATER, LocalDateTime.of(2025, 11, 1, 21, 0, 0));
+
+    public static final ReservedSeat LATE_BIRD_TIME_DISCOUNT_RESERVED_SEAT = new ReservedSeat(
+            LATE_BIRD_TIME_DISCOUNT_SCREENING,
+            SEAT,
+            false
+    );
+
+    public static final Invoice LATE_BIRD_TIME_DISCOUNT_INVOICE = new Invoice(
+            LATE_BIRD_TIME_DISCOUNT_RESERVED_SEAT,
+            new Point(0),
+            PaymentMethod.CARD
+    );
+
+    public static final Screening NO_TIME_DISCOUNT_SCREENING = new Screening(1L, MOVIE, THEATER, LocalDateTime.of(2025, 11, 1, 15, 0, 0));
+
+    public static final ReservedSeat NO_TIME_DISCOUNT_RESERVED_SEAT = new ReservedSeat(
+            NO_TIME_DISCOUNT_SCREENING,
+            SEAT,
+            false
+    );
+
+    public static final Invoice NO_TIME_DISCOUNT_INVOICE = new Invoice(
+            NO_TIME_DISCOUNT_RESERVED_SEAT,
+            new Point(0),
+            PaymentMethod.CARD
+    );
 }
