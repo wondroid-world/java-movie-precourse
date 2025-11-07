@@ -1,6 +1,5 @@
 package domain.reservation;
 
-import domain.schedule.Screening;
 import org.junit.jupiter.api.Test;
 
 import static domain.fixture.Fixture.*;
@@ -12,8 +11,8 @@ public class ReservationTest {
     void 겹치지_않는_상영은_예약에_추가할_수_있다() {
         // given
         Reservation reservation = new Reservation();
-        Screening first = FIRST_SCREENING;
-        Screening second = SECOND_SCREENING;
+        ReservedSeat first = FIRST_RESERVEDSEAT;
+        ReservedSeat second = SECOND_RESERVEDSEAT;
 
         reservation.add(first);
 
@@ -26,8 +25,8 @@ public class ReservationTest {
     void 겹치는_상영은_예약에_추가할_수_없다() {
         // given
         Reservation reservation = new Reservation();
-        Screening first = FIRST_SCREENING;
-        Screening second = OVERLAPPED_SCREENING;
+        ReservedSeat first = FIRST_RESERVEDSEAT;
+        ReservedSeat second = OVERLAPPED_RESERVEDSEAT;
 
         reservation.add(first);
 
