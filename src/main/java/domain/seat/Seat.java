@@ -1,14 +1,9 @@
 package domain.seat;
 
-public class Seat {
-    private final SeatNumber seatNumber;
-    private final SeatType seatType;
-
-    public Seat(SeatNumber seatNumber, SeatType seatType) {
-        this.seatNumber = seatNumber;
-        this.seatType = seatType;
-    }
-
+public record Seat(
+        SeatNumber seatNumber,
+        SeatType seatType
+) {
     public Seat(char row, int column, SeatType seatType) {
         this(new SeatNumber(new Row(row), new Column(column)), seatType);
     }
