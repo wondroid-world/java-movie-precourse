@@ -55,4 +55,16 @@ public class Fixture {
             new Point(0),
             PaymentMethod.CARD
     );
+
+    public static final Invoice CASH_INVOICE = new Invoice(
+            NOT_MOVIE_DAY_RESERVED_SEAT,
+            new Point(0),
+            PaymentMethod.CASH
+    );
+
+    public static final Invoice CARD_INVOICE = new Invoice(
+            NOT_MOVIE_DAY_RESERVED_SEAT,
+            new Point(0),
+            PaymentMethod.CARD
+    );
 }
