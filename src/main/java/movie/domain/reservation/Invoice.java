@@ -1,7 +1,7 @@
-package domain.reservation;
+package movie.domain.reservation;
 
-import domain.PaymentMethod;
-import domain.Point;
+import movie.domain.PaymentMethod;
+import movie.domain.Point;
 
 import java.time.LocalDateTime;
 

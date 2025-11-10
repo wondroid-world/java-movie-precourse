@@ -1,7 +1,7 @@
-package domain.reservation;
+package movie.domain.reservation;
 
-import domain.screening.Screening;
-import domain.seat.Seat;
+import movie.domain.screening.Screening;
+import movie.domain.seat.Seat;
 
 import java.time.LocalDateTime;
 

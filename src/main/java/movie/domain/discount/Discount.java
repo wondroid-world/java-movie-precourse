@@ -1,6 +1,6 @@
-package domain.discount;
+package movie.domain.discount;
 
-import domain.reservation.Invoice;
+import movie.domain.reservation.Invoice;
 
 public interface Discount {
     Invoice discount(Invoice invoice);

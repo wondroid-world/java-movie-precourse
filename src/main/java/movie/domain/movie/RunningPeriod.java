@@ -1,4 +1,4 @@
-package domain.movie;
+package movie.domain.movie;
 
 import java.time.LocalDate;
 

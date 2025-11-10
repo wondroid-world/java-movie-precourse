@@ -1,7 +1,7 @@
-package domain;
+package movie.domain;
 
-import domain.discount.Discount;
-import domain.reservation.Invoice;
+import movie.domain.discount.Discount;
+import movie.domain.reservation.Invoice;
 
 import java.util.List;
 

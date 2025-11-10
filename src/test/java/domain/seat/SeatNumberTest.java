@@ -1,5 +1,8 @@
 package domain.seat;
 
+import movie.domain.seat.Column;
+import movie.domain.seat.Row;
+import movie.domain.seat.SeatNumber;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;

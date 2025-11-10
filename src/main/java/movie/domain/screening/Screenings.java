@@ -1,4 +1,4 @@
-package domain.screening;
+package movie.domain.screening;
 
 import java.util.ArrayList;
 import java.util.List;

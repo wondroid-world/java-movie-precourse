@@ -1,7 +1,7 @@
-package domain.discount;
+package movie.domain.discount;
 
-import domain.PaymentMethod;
-import domain.reservation.Invoice;
+import movie.domain.PaymentMethod;
+import movie.domain.reservation.Invoice;
 
 public class PaymentDiscount implements Discount{
     @Override

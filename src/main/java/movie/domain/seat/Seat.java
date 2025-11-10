@@ -1,4 +1,4 @@
-package domain.seat;
+package movie.domain.seat;
 
 public record Seat(
         SeatNumber seatNumber,

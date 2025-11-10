@@ -1,6 +1,7 @@
 package domain.reservation;
 
-import domain.Point;
+import movie.domain.Point;
+import movie.domain.reservation.Invoice;
 import org.junit.jupiter.api.Test;
 
 import static domain.fixture.Fixture.*;

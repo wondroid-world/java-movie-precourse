@@ -1,4 +1,4 @@
-package domain;
+package movie.domain;
 
 public record Point(int value) {
     public static final String ERROR_POINT_NO_NEGATIVE = "포인트는 마이너스 값이 올 수 없습니다.";

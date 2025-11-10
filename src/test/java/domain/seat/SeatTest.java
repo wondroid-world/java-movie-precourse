@@ -1,5 +1,7 @@
 package domain.seat;
 
+import movie.domain.seat.Seat;
+import movie.domain.seat.SeatType;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

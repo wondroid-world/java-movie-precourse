@@ -1,7 +1,8 @@
 package domain.discount;
 
 import domain.fixture.Fixture;
-import domain.reservation.Invoice;
+import movie.domain.discount.MovieDayDiscount;
+import movie.domain.reservation.Invoice;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

@@ -1,14 +1,14 @@
 package domain.fixture;
 
-import domain.PaymentMethod;
-import domain.Point;
-import domain.movie.Movie;
-import domain.reservation.Invoice;
-import domain.reservation.ReservedSeat;
-import domain.screening.Screening;
-import domain.seat.Seat;
-import domain.seat.SeatType;
-import domain.theater.Theater;
+import movie.domain.PaymentMethod;
+import movie.domain.Point;
+import movie.domain.movie.Movie;
+import movie.domain.reservation.Invoice;
+import movie.domain.reservation.ReservedSeat;
+import movie.domain.screening.Screening;
+import movie.domain.seat.Seat;
+import movie.domain.seat.SeatType;
+import movie.domain.theater.Theater;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;

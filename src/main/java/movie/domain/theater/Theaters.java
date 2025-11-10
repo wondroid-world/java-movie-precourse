@@ -1,4 +1,4 @@
-package domain.theater;
+package movie.domain.theater;
 
 import java.util.ArrayList;
 import java.util.List;

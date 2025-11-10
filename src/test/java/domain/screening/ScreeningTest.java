@@ -1,7 +1,8 @@
 package domain.screening;
 
-import domain.movie.Movie;
-import domain.theater.Theater;
+import movie.domain.movie.Movie;
+import movie.domain.screening.Screening;
+import movie.domain.theater.Theater;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 

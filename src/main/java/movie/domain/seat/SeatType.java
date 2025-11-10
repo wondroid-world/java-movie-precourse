@@ -1,4 +1,4 @@
-package domain.seat;
+package movie.domain.seat;
 
 public enum SeatType {
     S(18_000),

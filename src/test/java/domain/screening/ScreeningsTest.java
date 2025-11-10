@@ -1,6 +1,8 @@
 package domain.screening;
 
-import domain.theater.Theater;
+import movie.domain.screening.Screening;
+import movie.domain.screening.Screenings;
+import movie.domain.theater.Theater;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;

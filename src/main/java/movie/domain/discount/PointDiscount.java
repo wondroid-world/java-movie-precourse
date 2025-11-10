@@ -1,7 +1,7 @@
-package domain.discount;
+package movie.domain.discount;
 
-import domain.Point;
-import domain.reservation.Invoice;
+import movie.domain.Point;
+import movie.domain.reservation.Invoice;
 
 public class PointDiscount implements Discount {
     private final Point pointToUse;

@@ -1,5 +1,6 @@
 package domain.reservation;
 
+import movie.domain.reservation.ReservedSeat;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

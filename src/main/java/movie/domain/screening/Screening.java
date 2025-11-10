@@ -1,7 +1,7 @@
-package domain.screening;
+package movie.domain.screening;
 
-import domain.movie.Movie;
-import domain.theater.Theater;
+import movie.domain.movie.Movie;
+import movie.domain.theater.Theater;
 
 import java.time.LocalDateTime;
 

@@ -1,4 +1,4 @@
-package domain.seat;
+package movie.domain.seat;
 
 public record Row(char value) {
     private static final char START_ROW = 'A';

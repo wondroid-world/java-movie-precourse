@@ -1,4 +1,4 @@
-package domain.seat;
+package movie.domain.seat;
 
 public record Column(int value) {
     private static final int START_COLUMN = 1;

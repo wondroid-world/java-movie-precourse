@@ -1,6 +1,6 @@
-package domain.reservation;
+package movie.domain.reservation;
 
-import domain.screening.Screening;
+import movie.domain.screening.Screening;
 
 import java.util.ArrayList;
 import java.util.List;
